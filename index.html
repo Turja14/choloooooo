@@ -447,11 +447,7 @@ document.head.appendChild(st);
 // ── countdown ──
 function getTargetDate(){
   var now=new Date();
-  var target=new Date(now.getFullYear(),4,5,0,0,0,0);
-  if(now>=target){
-    target=new Date(now.getFullYear()+1,4,5,0,0,0,0);
-  }
-  return target;
+  return new Date(now.getFullYear(),4,5,0,0,0,0);
 }
 var TARGET = getTargetDate();
 function pad(n){return String(n).padStart(2,'0');}
